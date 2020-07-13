@@ -1,0 +1,26 @@
+﻿@page
+@model ExpediteWeb.Pages.Login.SignUpConfirmationModel
+@{
+    ViewData["Title"] = "SignUpConfirmation";
+}
+
+<div class="text-center">
+    <h3 class="display-4"><b>Alchemative</b></h3>
+    <br>
+</div>
+
+<form method="post" action="">
+    <div class="box">
+        <h3>Confirmation</h3>
+        <p style=" color:#9d9d9d">A 6 digit verification code is just send to <b>03001234567</b></p><br>
+
+        <input type="email" name="email" value="" placeholder="Enter Pin" class="email" />
+        <br>
+        <a href="#"><div class="btn">Submit</div></a> <!-- End Btn -->
+        <br>
+
+        <p style="margin: 10px; padding: 8px;">Didn't Get The Code? Retry In <a style="color:#35b3a2" asp-page="#">60 Sec</a> Now</p>
+
+    </div> <!-- End Box -->
+
+</form>

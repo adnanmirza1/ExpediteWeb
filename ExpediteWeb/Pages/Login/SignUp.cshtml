@@ -1,0 +1,31 @@
+﻿@page
+@model ExpediteWeb.Pages.Login.SignUpModel
+@{
+    ViewData["Title"] = "SignUp";
+}
+
+
+<div class="text-center">
+    <h3 class="display-4"><b>Alchemative</b></h3>
+    <br>
+</div>
+
+<form method="post" action="">
+    <div class="box">
+        <h3>Sign Up</h3><br>
+
+        <input type="email" name="email" value="" placeholder="Email or Phone" class="email" />
+        <br>
+        <input type="password" name="password" value="" placeholder="Password" class="email" />
+        <br>
+        <input type="password" name="Rpassword" value="" placeholder="Retype Password" class="email" />
+        <br>
+        <a asp-page="SignUpConfirmation"><div class="btn">Continue</div></a> <!-- End Btn -->
+        <br>
+
+        <p style="margin: 10px; padding: 8px;">Already Got An Account <a style="color:#35b3a2" asp-page="SignIn">Sign In</a> Now</p>
+
+    </div> <!-- End Box -->
+
+</form>
+

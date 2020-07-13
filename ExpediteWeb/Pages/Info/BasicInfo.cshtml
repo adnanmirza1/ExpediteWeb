@@ -1,0 +1,37 @@
+﻿@page
+@model ExpediteWeb.Pages.Info.BasicInfoModel
+@{
+    ViewData["Title"] = "BasicInfo";
+}
+
+
+<div class="text-center">
+    <h3 class="display-4"><b>Alchemative</b></h3>
+    <br>
+</div>
+
+<form method="post" action="">
+    <div class="box2">
+        <h3>Basic Info</h3><br>
+
+        <input type="text" name="fname" value="" placeholder="First Name" class="email" />
+        <input type="text" name="lname" value="" placeholder="Last Name" class="email" />
+
+        <input type="text" name="PhoneNumber" value="" placeholder="Phone Number" class="email" />
+        <input type="text" name="gender" value="" placeholder="Gender" class="email" />
+
+        <input type="text" name="dob" value="" placeholder="Date Of Birth" class="email" />
+        <input type="text" name="country" value="" placeholder="Country" class="email" />
+
+        <input type="text" name="province" value="" placeholder="State/Province" class="email" />
+        <input type="text" name="city" value="" placeholder="City" class="email" />
+
+
+        <input style="width: 625px;" type="text" name="address" value="" placeholder="Address" class="email" />
+        <br>
+        <a asp-page="#"><div class="btn">Continue</div></a>
+        <a asp-page="#" style="color: #989898;">Skip</a><!-- End Btn -->
+   
+    </div> <!-- End Box -->
+
+</form>
