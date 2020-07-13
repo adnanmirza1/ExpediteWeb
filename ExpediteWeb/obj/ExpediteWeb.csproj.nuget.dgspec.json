@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ALI COMPUTER CENTER\\source\\repos\\ExpediteWeb\\ExpediteWeb\\ExpediteWeb.csproj": {}
+    "C:\\Users\\ALI COMPUTER CENTER\\Desktop\\ExpediteWeb\\ExpediteWeb\\ExpediteWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ALI COMPUTER CENTER\\source\\repos\\ExpediteWeb\\ExpediteWeb\\ExpediteWeb.csproj": {
+    "C:\\Users\\ALI COMPUTER CENTER\\Desktop\\ExpediteWeb\\ExpediteWeb\\ExpediteWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ALI COMPUTER CENTER\\source\\repos\\ExpediteWeb\\ExpediteWeb\\ExpediteWeb.csproj",
+        "projectUniqueName": "C:\\Users\\ALI COMPUTER CENTER\\Desktop\\ExpediteWeb\\ExpediteWeb\\ExpediteWeb.csproj",
         "projectName": "ExpediteWeb",
-        "projectPath": "C:\\Users\\ALI COMPUTER CENTER\\source\\repos\\ExpediteWeb\\ExpediteWeb\\ExpediteWeb.csproj",
+        "projectPath": "C:\\Users\\ALI COMPUTER CENTER\\Desktop\\ExpediteWeb\\ExpediteWeb\\ExpediteWeb.csproj",
         "packagesPath": "C:\\Users\\ALI COMPUTER CENTER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ALI COMPUTER CENTER\\source\\repos\\ExpediteWeb\\ExpediteWeb\\obj\\",
+        "outputPath": "C:\\Users\\ALI COMPUTER CENTER\\Desktop\\ExpediteWeb\\ExpediteWeb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ALI COMPUTER CENTER\\AppData\\Roaming\\NuGet\\NuGet.Config",
