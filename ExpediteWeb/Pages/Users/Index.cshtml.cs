@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using ExpediteWeb.Data;
 using ExpediteWeb.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace ExpediteWeb.Pages.Users
 {
@@ -20,10 +21,27 @@ namespace ExpediteWeb.Pages.Users
         }
 
         public IList<User> User { get;set; }
+        [BindProperty(SupportsGet = true)]
+        public string SearchString { get; set; }
+        // Requires using Microsoft.AspNetCore.Mvc.Rendering;
+        public SelectList Name { get; set; }
+        [BindProperty(SupportsGet = true)]
+        public string Role { get; set; }
 
         public async Task OnGetAsync()
         {
-            User = await _context.User.ToListAsync();
+         
+
+
+            var users = from m in _context.User
+                         select m;
+            if (!string.IsNullOrEmpty(SearchString))
+            {
+                users = users.Where(s => s.Name.Contains(SearchString));
+            }
+           
+
+            User = await users.ToListAsync();
         }
     }
 }

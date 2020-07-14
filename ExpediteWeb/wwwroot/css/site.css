@@ -116,3 +116,10 @@ body {
     padding: 30px 30px 30px 30px;
     border: #e6e6e6 1px solid;
 }
+.box3 {
+    background: #ffffff;
+    width: 310px;
+    height: 220px;
+    border-radius: 2px;
+    border: #e6e6e6 1px solid;
+}

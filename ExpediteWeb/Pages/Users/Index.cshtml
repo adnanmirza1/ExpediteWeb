@@ -4,63 +4,127 @@
 @{
     ViewData["Title"] = "Index";
 }
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
 
-<h1>Index</h1>
+        .sidenav {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #ffffff;
+            overflow-x: hidden;
+            padding: 20px;
+            border-top: #e6e6e6 2px solid;
+            border-right: #e6e6e6 2px solid;
+            margin-top: 56px;
+        }
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.User[0].Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.User[0].UserID)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.User[0].InvitedOn)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.User[0].LastActive)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.User[0].Role)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.User[0].Status)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.User) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UserID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.InvitedOn)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastActive)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Role)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Status)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+            .sidenav a {
+                padding: 2px 0px 2px 0px;
+                text-decoration: none;
+                font-size: 15px;
+                color: black;
+                display: block;
+            }
+
+                .sidenav a.active {
+                    background-color:; /* Add a green color to the "active/current" link */
+                    color: #35b3a2;
+                }
+                .sidenav a:hover {
+                    color: #0094ff;
+                }
+
+        .main {
+            margin-left: 100px; /* Same as the width of the sidenav */
+        }
+    </style>
+</head>
+<body style=" background-color: #fafafa;">
+
+    <div class="sidenav">
+        <p>User Management</p>
+        <hr>
+        <a class="active" asp-page="#">Users</a>
+        <a asp-page="#">Settings</a>
+    </div>
+    <div class="main">
+        <div class="row">
+            <h3>Users</h3>
+            <p style="margin-left: 800px; margin-top: 3px;">
+                <a asp-page="Create" style="padding: 5px 15px 5px 15px; color : #35b3a2; border: 1px solid #35b3a2;">Add User</a>
+            </p>
+        </div>
+        <hr>
+        <div class="">
+            <form>
+                <p>
+                    <input class="email"  placeholder="Search User" type="text" asp-for="SearchString" />
+                    <input type="submit" value="Search" />
+                </p>
+            </form>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.User[0].Name)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.User[0].UserID)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.User[0].InvitedOn)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.User[0].LastActive)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.User[0].Role)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.User[0].Status)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.User)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.UserID)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.InvitedOn)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LastActive)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Role)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Status)
+                            </td>
+                            <td>
+                                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
