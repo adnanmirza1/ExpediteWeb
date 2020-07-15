@@ -534,3 +534,4 @@ C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\ExpediteWeb\ExpediteWeb\obj\Debu
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\ExpediteWeb\ExpediteWeb\obj\Debug\netcoreapp3.1\ExpediteWeb.genruntimeconfig.cache
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\ExpediteWeb\ExpediteWeb\obj\Debug\netcoreapp3.1\Razor\Pages\Main\applications.cshtml.g.cs
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\ExpediteWeb\ExpediteWeb\obj\Debug\netcoreapp3.1\Razor\Pages\Main\settings.cshtml.g.cs
+C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\ExpediteWeb\ExpediteWeb\obj\Debug\netcoreapp3.1\Razor\Pages\Login\authentication.cshtml.g.cs

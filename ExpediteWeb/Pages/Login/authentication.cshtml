@@ -1,0 +1,36 @@
+﻿@page
+@model ExpediteWeb.Pages.Login.authenticationModel
+@{
+    ViewData["Title"] = "authentication";
+}
+<style>
+    .box4 {
+        background: #f9f9f9;
+        width: 450px;
+        border-radius: 2px;
+        margin: 0 auto 0 auto;
+        padding: 10px 10px 10px 10px;
+        border: #e6e6e6 1px solid;
+    }
+</style>
+
+<br><br><br><br>
+<h3 style="text-align: center;">How would you like to recieve your Authentication codes?</h3><br />
+
+<a asp-page="SignInConfirmation">
+    <div class="box4">
+        <h3 style="color: black;">Text Message</h3>
+        <p style=" font-size: 0.8em; color: #b9b9b9 ">
+            A six digits verification code was just send to 03001234567
+        </p>
+    </div>
+</a>
+<br />
+<a asp-page="/SignInConfirmation">
+    <div class="box4">
+        <h3 style="color: black;">Email Message</h3>
+        <p style=" font-size: 0.8em; color: #b9b9b9 ">
+            A six digits verification code was just send to 03001234567
+        </p>
+    </div>
+</a>
