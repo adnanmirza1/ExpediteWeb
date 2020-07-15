@@ -3,29 +3,52 @@
 @{
     ViewData["Title"] = "SignInConfirmation";
 }
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .clr {
+             color:#9d9d9d;
+        }
+            .clr .a {
+                color:#35b3a2;
+            }
+        .da {
+            margin: 10px;
+            padding: 8px;
+        }
 
-<div class="text-center">
-    <h3 class="display-4"><b>Alchemative</b></h3>
-    <br>
-</div>
+            .da .a {
+                color: #35b3a2;
+            }
+    </style>
+</head>
+<body>
 
-<form method="post" action="">
-    <div class="box">
-        <h3>Confirmation</h3>
-        <p style=" color:#9d9d9d">
-            A 6 digit verification code is just send to <b>03001234567</b> Don't have Phone Right Now
-            <a style="color:#35b3a2" asp-page="#">Send Email Instead</a>
-        </p>
-        <p style=" color:#9d9d9d"></p>
-        
-
-        <input type="text" name="Pin" value="" placeholder="Enter Pin" class="email" />
+    <div class="text-center">
+        <h3 class="display-4"><b>Alchemative</b></h3>
         <br>
-        <a asp-page="/Main/applications"><div class="btn">Submit</div></a> <!-- End Btn -->
-        <br>
+    </div>
 
-        <p style="margin: 10px; padding: 8px;">Didn't Get The Code? Retry In <a style="color:#35b3a2" asp-page="#">60 Sec</a> Now</p>
+    <form method="post" action="">
+        <div class="box">
+            <h3>Confirmation</h3>
+            <p class="clr" >
+                A 6 digit verification code is just send to <b>03001234567</b> Don't have Phone Right Now
+                <a  asp-page="#">Send Email Instead</a>
+            </p>
 
-    </div> <!-- End Box -->
 
-</form>
+            <input type="text" name="Pin" value="" placeholder="Enter Pin" class="email" />
+            <br>
+            <a asp-page="/Main/applications"><div class="btn">Submit</div></a> <!-- End Btn -->
+            <br>
+
+            <p class="da">Didn't Get The Code? Retry In <a asp-page="#">60 Sec</a> Now</p>
+
+        </div> <!-- End Box -->
+
+    </form>
+</body>
+</html>

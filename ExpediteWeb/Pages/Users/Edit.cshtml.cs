@@ -30,7 +30,7 @@ namespace ExpediteWeb.Pages.Users
                 return NotFound();
             }
 
-            User = await _context.User.FirstOrDefaultAsync(m => m.ID == id);
+            User = await _context.User.FirstOrDefaultAsync(m => m.Id == id);
 
             if (User == null)
             {
@@ -56,7 +56,7 @@ namespace ExpediteWeb.Pages.Users
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!UserExists(User.ID))
+                if (!UserExists(User.Id))
                 {
                     return NotFound();
                 }
@@ -71,7 +71,7 @@ namespace ExpediteWeb.Pages.Users
 
         private bool UserExists(int id)
         {
-            return _context.User.Any(e => e.ID == id);
+            return _context.User.Any(e => e.Id == id);
         }
     }
 }

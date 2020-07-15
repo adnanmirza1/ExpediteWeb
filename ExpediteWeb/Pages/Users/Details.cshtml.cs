@@ -28,7 +28,7 @@ namespace ExpediteWeb.Pages.Users
                 return NotFound();
             }
 
-            User = await _context.User.FirstOrDefaultAsync(m => m.ID == id);
+            User = await _context.User.FirstOrDefaultAsync(m => m.Id == id);
 
             if (User == null)
             {
