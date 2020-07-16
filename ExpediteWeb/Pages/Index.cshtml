@@ -4,9 +4,20 @@
     ViewData["Title"] = "Home page";
 }
 
-    <div class="text-center">
-        <h1 class="display-4">Alchemative</h1>
-        <a asp-page="Login/SignIn" class="btn">Login</a><br>
-        <a href="Login/SignUp" class="btn">Sign Up</a>
-        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    </div>
+<div class="text-center">
+    <h1 class="display-4">Alchemative</h1>
+    <a asp-page="Login/SignIn" class="btn">Login</a><br>
+    <a asp-page="Login/SignUp" class="btn">Sign Up</a>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<div>
+
+    {
+    <a asp-controller="Account" asp-action="Login/SignIn">Login</a>
+    <a asp-controller="Account" asp-action="Login/SignUp">SignUp</a>
+
+
+    <a asp-page="Areas/Identity/Pages/Account/Register" class="btn">Sign Up</a>
+    }
+</div>
+

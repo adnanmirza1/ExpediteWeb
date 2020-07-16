@@ -20,7 +20,7 @@ namespace ExpediteWeb.Pages.Users
             _context = context;
         }
 
-        public IList<User> User { get;set; }
+        public IList<User> User { get; set; }
         [BindProperty(SupportsGet = true)]
         public string SearchString { get; set; }
         // Requires using Microsoft.AspNetCore.Mvc.Rendering;

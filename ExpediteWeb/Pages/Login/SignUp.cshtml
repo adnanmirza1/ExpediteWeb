@@ -29,14 +29,14 @@
         <div class="box">
             <h3>Sign Up</h3><br>
 
-            <input asp-for="email" type="email" name="email" value="" placeholder="Email or Phone" class="email" />
+            <input asp-validation-for="email" asp-for="Email" type="email" name="email" value="" placeholder="Email or Phone" class="email" />
             <br>
-            <input asp-for="password" type="password" name="password" value="" placeholder="Password" class="email" />
+            <input asp-validation-for="passwod" asp-for="Password" type="password" name="password" value="" placeholder="Password" class="email" />
             <br>
-            <input asp-for="rpassword" type="password" name="rpassword" value="" placeholder="Retype Password" class="email" />
+            <input asp-validation-for="Rpasswod" asp-for="Rpassword" type="password" name="rpassword" value="" placeholder="Retype Password" class="email" />
             <br>
 
-            <button type="submit" class="btn">Continue</button>
+            <button value="signup" type="submit" class="btn">Continue</button>
             <a asp-page="SignUpConfirmation"><div class="btn">Continue</div></a> <!-- End Btn -->
             <br>
 

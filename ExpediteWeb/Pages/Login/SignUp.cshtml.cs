@@ -16,13 +16,12 @@ namespace ExpediteWeb.Pages.Login
         }
         [Required]
         [RegularExpression(@"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$",ErrorMessage ="Invalid Email Address,")]
-        public string email{get; set;}
+        public string Email{get; set;}
 
-        [Required]
-        [MinLength(8,ErrorMessage ="Password must be 8 characters long.")]
-        public string password { get; set; }
+        [Required, DataType(DataType.Password)]
+        public string Password { get; set; }
 
-        [Required]
-        public string rpassword { get; set; }
+        [DataType(DataType.Password), Compare(nameof(Password))]
+        public string Rpassword { get; set; }
     }
 }
